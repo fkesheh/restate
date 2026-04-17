@@ -6,12 +6,24 @@
     "url": "https://github.com/fkesheh"
   },
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/restate-activate.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading restate mode..."
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/restate.sh\"",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/restate.js\"",
             "timeout": 5,
             "statusMessage": "Injecting restate reminder..."
           }

@@ -1,0 +1,14 @@
+{
+  "name": "restate",
+  "owner": {
+    "name": "Foad Kesheh",
+    "url": "https://github.com/fkesheh"
+  },
+  "plugins": [
+    {
+      "name": "restate",
+      "source": ".",
+      "description": "Injects a reminder to restate questions in fully concrete terms before answering."
+    }
+  ]
+}

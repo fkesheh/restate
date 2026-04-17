@@ -6,26 +6,12 @@
     "url": "https://github.com/fkesheh"
   },
   "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/restate-activate.js\"",
-            "timeout": 5,
-            "statusMessage": "Loading restate mode..."
-          }
-        ]
-      }
-    ],
     "UserPromptSubmit": [
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/restate.js\"",
-            "timeout": 5,
-            "statusMessage": "Injecting restate reminder..."
+            "type": "prompt",
+            "prompt": "Restate the question in fully concrete terms, making every implicit detail explicit. Then answer."
           }
         ]
       }

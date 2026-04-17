@@ -8,6 +8,10 @@ A tiny Claude Code plugin that injects a reminder on every user prompt:
 
 Ambiguous prompts are the root cause of most off-target answers. Forcing Claude to restate the question concretely before answering surfaces hidden assumptions early, reduces rework, and improves grounding — especially for short or underspecified requests.
 
+## Credits
+
+Idea from [@sdmat123](https://x.com/sdmat123) — see the originating post: [x.com/sdmat123/status/2044931930840506609](https://x.com/sdmat123/status/2044931930840506609).
+
 ## How it works
 
 The plugin registers a `UserPromptSubmit` hook that emits `hookSpecificOutput.additionalContext` on every prompt submit. The extra context is delivered to Claude alongside the user's message.

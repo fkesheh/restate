@@ -20,18 +20,30 @@ No dependencies — just a 2-line bash script.
 
 ## Install
 
-Via the Claude Code plugin marketplace:
+One-liner from your shell:
 
 ```bash
+claude plugin marketplace add fkesheh/restate && claude plugin install restate@restate
+```
+
+Or from inside Claude Code:
+
+```
 /plugin marketplace add fkesheh/restate
-/plugin install restate
+/plugin install restate@restate
+```
+
+Then reload plugins:
+
+```
+/reload-plugins
 ```
 
 Or point the marketplace at a local checkout while developing:
 
 ```bash
-/plugin marketplace add /path/to/restate
-/plugin install restate
+claude plugin marketplace add /path/to/restate
+claude plugin install restate@restate
 ```
 
 ## Files
